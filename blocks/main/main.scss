@@ -1,0 +1,242 @@
+%main-block {
+  font-family: Roboto, sans-serif;
+  background-color: #c4c4c4;
+  align-items: baseline;
+  justify-content: center;
+  display: flex;
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+%max-width-mob {
+  max-width: inherit;
+}
+
+.main {
+  margin-bottom: 60px;
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+  }
+  &__quotes {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 1.55em;
+  }
+  &__quote {
+    font-family: Roboto, sans-serif;
+    background-color: #c4c4c4;
+    align-items: baseline;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    max-width: 180px;
+    width: 100%;
+    & h3 {
+      margin-top: 7.35em;
+    }
+  }
+  &__qoute-img {
+    object-fit: cover;
+  }
+  &__info {
+    min-height: 516px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info-news {
+    @extend %main-block;
+    @extend %max-width-mob;
+    max-width: 375px;
+    width: 100%;
+    & h3 {
+      margin-right: 8.5em;
+      margin-top: 3.85em;
+    }
+  }
+  &__info-about {
+    @extend %main-block;
+    @extend %max-width-mob;
+    max-width: 180px;
+    width: 100%;
+    & h3 {
+      margin-left: 0.7em;
+      margin-top: 2.85em;
+    }
+  }
+  &__info-purchases {
+    @extend %main-block;
+    @extend %max-width-mob;
+    max-width: 180px;
+    width: 100%;
+    & h3 {
+      margin-top: 3.2em;
+    }
+  }
+  &__info-etc {
+    @extend %main-block;
+    @extend %max-width-mob;
+    max-width: 180px;
+    width: 100%;
+    & h3 {
+      margin-top: 4.2em;
+    }
+  }
+  &__info-wrapper {
+    display: none;
+  }
+  &__info-img {
+    display: none;
+  }
+  &__bot {
+    display: none;
+    align-items: center;
+    min-height: 94px;
+    background-color: #f0f0f0;
+    &-block {
+      width: 44px;
+      height: 44px;
+      background-color: #c4c4c4;
+    }
+    &-field {
+      background: #fff;
+      width: 90%;
+      min-height: 44px;
+    }
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      max-width: 664px;
+      width: 100%;
+      margin-right: 20px;
+    }
+  }
+}
+@media screen and (max-width: 958px) {
+  .main {
+    margin-bottom: 0;
+    &__quotes {
+    }
+    &__quote,
+    .main__quote {
+      height: auto;
+    }
+    &__qoute-img {
+      max-width: 546px;
+      height: 320px;
+    }
+    &__info {
+      flex-direction: column;
+    }
+    &__info-news {
+      min-height: 309px;
+      & h3 {
+        margin-right: 20em;
+        margin-top: 2.3em;
+      }
+    }
+    %max-width-mob {
+      max-width: 100%;
+      margin-bottom: 27px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    %main-block {
+      height: 182px;
+    }
+    &__info-about {
+      justify-content: space-between;
+      height: 182px;
+      & h3 {
+        display: none;
+      }
+    }
+
+    &__info-wrapper {
+      display: none;
+      width: 71%;
+      flex-direction: column;
+      align-self: end;
+    }
+    &__info-text {
+      font-size: 18px;
+      font-weight: 400;
+      color: black;
+      margin-bottom: 0.5em;
+      &:first-child {
+        color: #0078dc;
+      }
+      &:not(:first-child) {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__info_activ {
+      background-color: #efefef;
+      .main__info-img {
+        display: initial;
+      }
+      .main__info-wrapper {
+        display: flex;
+      }
+    }
+    &__bot {
+      display: flex;
+    }
+  }
+}
+@media screen and (max-width: 736px) {
+  .container {
+    max-width: 394px;
+  }
+  .header {
+    &__img {
+      width: 70px;
+      height: 42px;
+    }
+  }
+  .main {
+    &__quotes {
+      flex-direction: column;
+    }
+    &__info-news {
+      align-items: center;
+      & h3 {
+        margin: 0;
+      }
+    }
+    &__qoute-img {
+      max-width: 100%;
+      margin-bottom: 17px;
+    }
+    &__quote {
+      max-width: 100%;
+      min-height: 319px;
+      align-items: center;
+      & h3 {
+        margin: 0;
+      }
+    }
+    &__info_activ {
+      justify-content: center;
+      .main__info-wrapper {
+        width: 90%;
+      }
+      .main__info-img {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 413px) {
+  .container {
+    max-width: 330px;
+  }
+}

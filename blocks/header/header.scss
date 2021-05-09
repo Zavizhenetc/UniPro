@@ -1,0 +1,22 @@
+.header {
+  margin-bottom: 23px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 91.5%;
+    min-height: 91px;
+  }
+}
+@media screen and (max-width: 958px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    &__wrapper {
+      min-height: 100px;
+      margin: 0;
+    }
+  }
+}
